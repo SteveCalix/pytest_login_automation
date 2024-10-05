@@ -6,7 +6,7 @@ Login tests are ran for chrome and firefox
 Setup steps on local environment:
 1. Install python. Latest version (3.12) is compatible.
 
-2. Create a directory where all the code will be copied or downloaded to e.g. login_automation
+2. Create a directory where all the code will be copied or downloaded to e.g. pytest_login_automation
 
 3. Go to the directory cd /login_automation in this case
 
