@@ -8,7 +8,7 @@ Setup steps on local environment:
 
 2. Create a directory where all the code will be copied or downloaded to e.g. pytest_login_automation
 
-3. Go to the directory cd /login_automation in this case
+3. Go to the directory cd /pytest_login_automation in this case
 
 4. Create a virtual environment as not to mess up other python projects you may have by typing
     python -m venv .
