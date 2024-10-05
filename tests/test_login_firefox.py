@@ -25,7 +25,9 @@ def test_wrong_username_chrome(firefox_driver):
     for i in range(3):
         try:
             assert login.get_error_message() == 'Your username is invalid!'
-        except AssertionError:
+            break
+        except AssertionError as msg:
+            print(msg)
             continue
 
 
@@ -34,5 +36,7 @@ def test_wrong_password_chrome(firefox_driver):
     for i in range(3):
         try:
             assert login.get_error_message() == 'Your password is invalid!'
-        except AssertionError:
+            break
+        except AssertionError as msg:
+            print(msg)
             continue
