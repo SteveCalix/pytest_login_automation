@@ -7,7 +7,7 @@ def submit_credentials(username, password, driver):
     login.enter_username(username)
     login.enter_password(password)
     login.click_login_button()
-    return LoginPage(driver)
+    return login
 
 
 def test_login_success_chrome(chrome_driver):
