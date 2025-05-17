@@ -4,7 +4,7 @@ from tests.test_data import valid_username,valid_password,invalid_password,inval
 from pages.helpers.common_actions import submit_credentials
 
 
-def test_login_success_chrome(firefox_driver):
+def test_login_success_firefox(firefox_driver):
     submit_credentials(valid_username, valid_password, firefox_driver)
     success_login_url = firefox_driver.current_url
     assert success_login_url.find(partial_url) >= 0
@@ -14,7 +14,7 @@ def test_login_success_chrome(firefox_driver):
     assert login_success.find(LoginSuccessPage.LOGOUTBUTTON)
 
 
-def test_wrong_username_chrome(firefox_driver):
+def test_wrong_username_firefox(firefox_driver):
     login = submit_credentials(invalid_username, valid_password, firefox_driver)
     for i in range(3):
         try:
@@ -25,7 +25,7 @@ def test_wrong_username_chrome(firefox_driver):
             continue
 
 
-def test_wrong_password_chrome(firefox_driver):
+def test_wrong_password_firefox(firefox_driver):
     login = submit_credentials(valid_username, invalid_password, firefox_driver)
     for i in range(3):
         try:
